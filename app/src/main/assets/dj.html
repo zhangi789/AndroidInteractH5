@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>W3Cschool</title>
+
+</head>
+<body>
+<center>android 和h5 js交互
+    <p></p></center>
+<center>
+    <div style="color:#0000FF">
+        <p>h5访问客户端 </p>
+    </div>
+</center>
+<p>
+    <button onclick="jsToapp()">js调用安卓里面的方法实现跳转逻辑</button>
+<p>
+
+    <script type="text/javascript">
+     function appToh5(message){
+        alert(message);
+     }
+     function Noarguments(){
+          alert('js中无参方法无返回值');
+     }
+
+
+     //有参有返回值的方法
+     function sum(a,b) {
+                return a+b;
+     }
+     //无参有返回值的方法
+     function add() {
+          return 'add:'+200;
+     }
+     function jsToapp(){
+        window.android.setJump('张三');
+
+    }
+    </script>
+</body>
+</html>
